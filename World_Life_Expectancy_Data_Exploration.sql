@@ -18,12 +18,6 @@ AND MAX(lifeexpectancy) <>0
 ORDER BY Life_Increase_15_Years DESC
 ;
 
-SELECT Year, ROUND(AVG(lifeexpectancy),1) AS average_life_expectancy
-FROM world_life_expectancy
-WHERE lifeexpectancy <> 0
-GROUP BY Year
-ORDER BY Year
-;
 
 /* 2. Calculate the average life expectancy by year and also calculate the growth increase from the previous year. 
 Which year experienced the biggest increase and what year experienced the lowest? */ 
@@ -90,5 +84,8 @@ ROUND(AVG(lifeexpectancy),1) avg_life_exp
 FROM world_life_expectancy
 GROUP BY Status
 ;
+	
+
+
 	
 
